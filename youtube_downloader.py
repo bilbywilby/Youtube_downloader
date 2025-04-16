@@ -659,7 +659,7 @@ class YoutubeDownloaderGUI:
                 try:
                     if file.is_file():
                         file.unlink()
-                except Exception as e:
+               except Exception as e:
                     logger.warning(f"Failed to cleanup temp file {file}: {e}")
         except Exception as e:
             logger.error(f"Cleanup error: {e}")
@@ -671,3 +671,5 @@ if __name__ == '__main__':
     except Exception as e:
         logger.critical(f"Application crash: {e}", exc_info=True)
         sg.popup_error(f"Critical error: {e}\nCheck logs for details.")
+
+
